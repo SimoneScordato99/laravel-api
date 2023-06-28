@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 class projectController extends Controller
 {
     public function index(){
-        $projects = Project::with(['genere', 'lenguages'])->get();
+        $projects = Project::with(['genere', 'lenguages'])->paginate(4);
         return response()->json([
             'success' => true,
             'results' => $projects
