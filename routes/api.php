@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\api\projectController;
+use App\Http\Controllers\api\GenereController;
+use App\Http\Controllers\api\LenguageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +21,5 @@ use App\Http\Controllers\api\projectController;
 //     return $request->user();
 // });
 Route::get('/projects', [projectController::class, 'index']);
+Route::get('/genere', [GenereController::class, 'index']);
+Route::get('/lenguage', [LenguageController::class, 'index']);
